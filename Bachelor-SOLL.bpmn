@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.10.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.10.0">
   <bpmn:collaboration id="Collaboration_05n83ww">
     <bpmn:participant id="Participant_1rtekpr" name="Bachelorarbeit" processRef="Process_1" />
   </bpmn:collaboration>
@@ -124,6 +124,30 @@
       <bpmn:outgoing>SequenceFlow_17zzhft</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:serviceTask id="Task_1g16udj" name="Stand der Prüfungen überprüfen">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">http://localhost:8081/GPM17/services/Approve?wsdl</camunda:inputParameter>
+            <camunda:inputParameter name="Payload">
+              <camunda:script scriptFormat="freemarker"><![CDATA[<soapenv.Envelope.xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelop/"xmlns:def="http://DefaultNamespace">
+<soapenv.Header/>
+<soapenv.Body>
+<def:isApproved>
+<def:studentId>${studentId}</def:studentId>
+</def:isApproved>
+</soapenv.Body>
+</soapenv:Envelope>]]></camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type"><![CDATA[application/soap+xml;charset=UTF-8;action=""]]></camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="isApproved"><![CDATA[${S(response).childElement("Body").childElement("http://DefaultNamespace", "isApprovedResponse").childElement("isApprovedReturn").textContent()}]]></camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>soap-http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1kwmdse</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0cl7fgi</bpmn:outgoing>
       <bpmn:property id="Property_09b5lcx" name="__targetRef_placeholder" />
