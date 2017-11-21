@@ -1,0 +1,6 @@
+main/resources/java/de/fhaachen/REST/entities/QThesis.class
+main/resources/java/de/fhaachen/REST/api/ThesisApi.class
+main/resources/java/de/fhaachen/REST/entities/QStudent.class
+main/resources/java/de/fhaachen/REST/entities/Thesis.class
+main/resources/java/de/fhaachen/REST/entities/Student.class
+main/resources/java/de/fhaachen/REST/dto/ThesisDTO.class
