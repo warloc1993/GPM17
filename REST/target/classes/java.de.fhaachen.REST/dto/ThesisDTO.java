@@ -7,6 +7,16 @@ public class ThesisDTO implements Serializable {
     private String prename;
     private String thesis_title;
     private String supervisor;
+    private int approved;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -24,6 +34,10 @@ public class ThesisDTO implements Serializable {
         this.thesis_title = thesis_title;
     }
 
+    public void setApproved(int approved) {
+        this.approved = approved;
+    }
+
     public String getName() {
         return name;
     }
@@ -38,4 +52,9 @@ public class ThesisDTO implements Serializable {
 
     public String getThesis_title() {
         return thesis_title;
-    }}
+    }
+
+    public int getApproved() {
+        return approved;
+    }
+}

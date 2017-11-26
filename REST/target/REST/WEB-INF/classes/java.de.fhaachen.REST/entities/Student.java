@@ -75,6 +75,18 @@ public class Student {
         this.passed_bachelor_thesis = passed_bachelor_thesis;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", prename='" + prename + '\'' +
+                ", passed_practice_project=" + passed_practice_project +
+                ", passed_bachelor_thesis=" + passed_bachelor_thesis +
+                ", passed_colloquium=" + passed_colloquium +
+                '}';
+    }
+
     public int getPassed_colloquium() {
         return passed_colloquium;
     }

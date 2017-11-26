@@ -69,6 +69,19 @@ public class Thesis {
 
     public void setApproved(int approved) {
         this.approved = approved;
-    }}
+    }
+
+    @Override
+    public String toString() {
+        return "Thesis{" +
+                "id=" + id +
+                ", student_id=" + student_id +
+                ", title='" + title + '\'' +
+                ", supervisor='" + supervisor + '\'' +
+                ", approved=" + approved +
+                '}';
+    }
+
+}
 
 
