@@ -60,11 +60,12 @@ public class ApproveThesisApi {
             // If there are any exceptions, roll back the changes
             // Print the Exception
             e.printStackTrace();
-            return "{\" success \": \" false \"}";
+            return "{\"success\": \"false\"}";
         } finally {
             // Close the EntityManager
             gpmserver2.close();
-            return "{\" success \": \" true \", \" id \": \""  + thesis.getId() + "\"}";
+
         }
+        return "{\"success\": \"true\", \"student_id\": \""  + thesis.getStudent_id() + "\", \"thesis_id\": \""  + thesis.getId() + "\"}";
     }
 }

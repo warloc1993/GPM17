@@ -93,13 +93,13 @@ public class ThesisApi {
             // If there are any exceptions, roll back the changes
             // Print the Exception
             e.printStackTrace();
-            return "{\" success \": \" false \"}";
+            return "{\"success\": \"false\"}";
         } finally {
             // Close the EntityManager
             gpmserver2.close();
-            return "{\" success \": \" true \", \" student_id \": \""  + student.getId() + "\"}";
-        }
 
+        }
+        return "{\"success\": \"true\", \"student_id\": \""  + student.getId() + "\", \"thesis_id\": \"" + thesis.getId() + "\"}";
     }
 
 }

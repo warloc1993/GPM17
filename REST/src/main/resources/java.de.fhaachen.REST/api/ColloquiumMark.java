@@ -61,13 +61,13 @@ public class ColloquiumMark {
         } catch (Exception e) {
             // Print the Exception
             e.printStackTrace();
-            return "{\" success \": \" false \"}";
+            return "{\"success\": \"false\"}";
         } finally {
             // Close the EntityManager gpmserver1
             gpmserver1.close();
-            return "{\" success \": \" true \", \" id \": \""  + student.getId() + "\"}";
-        }
 
+        }
+        return "{\"success\": \"true\", \"student_id\": \""  + student.getId() + "\"}";
     }
 
 }
