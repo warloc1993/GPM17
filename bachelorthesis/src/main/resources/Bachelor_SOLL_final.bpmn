@@ -112,7 +112,7 @@
     <bpmn:userTask id="Task_11hxxms" name="Verlägerung beantragen">
       <bpmn:extensionElements>
         <camunda:formData>
-          <camunda:formField id="FormField_0qpmlto" label="fu youu" type="string" defaultValue=" fu ouuu" />
+          <camunda:formField id="grund" label="Grund" type="string" defaultValue="triftigen grund angeben." />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1m6zywy</bpmn:incoming>
@@ -194,7 +194,8 @@
     <bpmn:userTask id="Task_1shmopo" name="Antrag prüfen">
       <bpmn:extensionElements>
         <camunda:formData>
-          <camunda:formField id="FormField_1j4gl1v" label="ffff" type="string" />
+          <camunda:formField id="gruacc" label="Grund" type="string" defaultValue="${grund}" />
+          <camunda:formField id="gruaccept" label="Akzeptieren?" type="boolean" defaultValue="false" />
         </camunda:formData>
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0ec9eau</bpmn:incoming>
@@ -351,7 +352,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_15hkpnx" sourceRef="Task_1ds7tbi" targetRef="Task_0g3cmxi" />
     <bpmn:sequenceFlow id="SequenceFlow_1qmxqiw" sourceRef="Task_0g3cmxi" targetRef="ExclusiveGateway_12zvcd7" />
     <bpmn:sequenceFlow id="SequenceFlow_1guor9k" name="Ja" sourceRef="ExclusiveGateway_05d2s3m" targetRef="Task_0jg3btw">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${x==true}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${gruaccept==true}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0s9uo96" sourceRef="Task_0jg3btw" targetRef="ExclusiveGateway_12zvcd7" />
     <bpmn:sequenceFlow id="SequenceFlow_0u224of" sourceRef="ExclusiveGateway_12zvcd7" targetRef="Task_1en77fu" />
@@ -374,7 +375,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_19oskzg" sourceRef="Task_150gt9m" targetRef="EndEvent_0xcscjy" />
     <bpmn:sequenceFlow id="SequenceFlow_1uhvbo2" sourceRef="Task_15acnmt" targetRef="EndEvent_03xt6ff" />
     <bpmn:sequenceFlow id="SequenceFlow_198z7js" name="nein" sourceRef="ExclusiveGateway_05d2s3m" targetRef="EndEvent_04nod12">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${x==false}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${gruaccept==false}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0owijmx" sourceRef="Task_1shmopo" targetRef="ExclusiveGateway_05d2s3m" />
     <bpmn:sequenceFlow id="SequenceFlow_168w963" name="ja" sourceRef="ExclusiveGateway_1u0qafz" targetRef="Task_1ds7tbi">
