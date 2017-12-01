@@ -1,7 +1,7 @@
 
 public class Approve {
 
-	public boolean isApproved(long studenId) {
+	public boolean isApproved(long studentId) {
 		return true;
 	}
 	
