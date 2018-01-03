@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="definitions_1313rr2" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="passingBachelor" name="Bachelor bestanden">
+    <extensionElements>
+      <biodi:bounds x="200" y="200" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="input1" label="Kolloquium bestanden?" camunda:inputVariable="collnote">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>collnote</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_1vf0krs" label="Mit Auszeichnung?" camunda:inputVariable="urkunde">
+        <inputExpression id="LiteralExpression_0sfojhd" typeRef="boolean">        <text>urkunde</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Bachelor bestanden" name="passed" typeRef="boolean" />
+      <output id="OutputClause_13qj4vw" label="Auszeichnung" name="great" typeRef="boolean" />
+      <rule id="row-649894044-1">
+        <inputEntry id="UnaryTests_0towg71">        <text><![CDATA["5.0"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_14spcf7">        <text>false</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_04a6b2s">        <text>false</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_17vbfqy">        <text>false</text>
+</outputEntry>
+      </rule>
+      <rule id="row-649894044-2">
+        <inputEntry id="UnaryTests_03diva0">        <text><![CDATA[not("5.0")]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_14x9z8g">        <text>false</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1afjfcz">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0pg3e5i">        <text>false</text>
+</outputEntry>
+      </rule>
+      <rule id="row-649894044-3">
+        <inputEntry id="UnaryTests_0ke4uz5">        <text><![CDATA[not("5.0")]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0idxan0">        <text>true</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1ll8t24">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1anuncj">        <text>true</text>
+</outputEntry>
+      </rule>
+      <rule id="row-572257154-1">
+        <inputEntry id="UnaryTests_00gz8ql">        <text><![CDATA["5.0"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1tihlzs">        <text>true</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0hx1aby">        <text>false</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0j9vwmm">        <text>false</text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

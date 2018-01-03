@@ -21,7 +21,7 @@ public class ColloquiumMarkDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         String name = (String) delegateExecution.getVariable("name");
         String prename = (String) delegateExecution.getVariable("prename");
-        long pcq = (Long) delegateExecution.getVariable("collnote");
+        float pcq = Float.parseFloat((String) delegateExecution.getVariable("collnote"));
         int pcqInt=5;
         pcqInt=(int) pcq;
 

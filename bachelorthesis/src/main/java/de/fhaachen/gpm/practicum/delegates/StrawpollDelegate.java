@@ -16,20 +16,21 @@ import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 
 import javax.ws.rs.core.MediaType;
+import java.util.Date;
 
 
 public class StrawpollDelegate implements JavaDelegate {
     private int pollId;
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-
+        Date termin = (Date) delegateExecution.getVariable("termin");
         String[] options = new String[2];
         options[1] = "Akzeptieren";
         options[0] = "Ablehnen";
         String DBurl = "http://localhost:4500/api/v2/polls";
 
         StrawpollDTO thesis = new StrawpollDTO();
-        thesis.setTitle("Termin des Kolloquiums");
+        thesis.setTitle("Termin des Kolloquiums: " + termin);
         thesis.setOptions(options);
 
         ClientConfig cc = new DefaultClientConfig();

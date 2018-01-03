@@ -1,0 +1,16 @@
+/home/gpm17/IdeaProjects/REST/target/generated-sources/main/resources/java/de/fhaachen/REST/entities/QWrittenExams.java
+/home/gpm17/IdeaProjects/REST/target/generated-sources/main/resources/java/de/fhaachen/REST/entities/QSubjects.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/entities/Student.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/api/BachelorMark.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/api/ColloquiumMark.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/api/ApproveThesisApi.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/api/ThesisApi.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/api/CalcMark.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/entities/Thesis.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/entities/WrittenExams.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/dto/ThesisDTO.java
+/home/gpm17/IdeaProjects/REST/target/generated-sources/main/resources/java/de/fhaachen/REST/entities/QStudent.java
+/home/gpm17/IdeaProjects/REST/target/generated-sources/main/resources/java/de/fhaachen/REST/entities/QThesis.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/dto/ExamDTO.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/entities/Subjects.java
+/home/gpm17/IdeaProjects/REST/src/main/resources/java.de.fhaachen.REST/dto/StudentDTO.java

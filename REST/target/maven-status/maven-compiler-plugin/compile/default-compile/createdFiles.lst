@@ -1,0 +1,16 @@
+main/resources/java/de/fhaachen/REST/entities/QSubjects.class
+main/resources/java/de/fhaachen/REST/dto/ThesisDTO.class
+main/resources/java/de/fhaachen/REST/entities/WrittenExams.class
+main/resources/java/de/fhaachen/REST/api/ThesisApi.class
+main/resources/java/de/fhaachen/REST/dto/ExamDTO.class
+main/resources/java/de/fhaachen/REST/api/BachelorMark.class
+main/resources/java/de/fhaachen/REST/dto/StudentDTO.class
+main/resources/java/de/fhaachen/REST/api/ColloquiumMark.class
+main/resources/java/de/fhaachen/REST/entities/Subjects.class
+main/resources/java/de/fhaachen/REST/entities/QThesis.class
+main/resources/java/de/fhaachen/REST/entities/QWrittenExams.class
+main/resources/java/de/fhaachen/REST/entities/QStudent.class
+main/resources/java/de/fhaachen/REST/api/ApproveThesisApi.class
+main/resources/java/de/fhaachen/REST/api/CalcMark.class
+main/resources/java/de/fhaachen/REST/entities/Thesis.class
+main/resources/java/de/fhaachen/REST/entities/Student.class

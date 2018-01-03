@@ -20,7 +20,7 @@ public class BachelorMarkDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         String name = (String) delegateExecution.getVariable("name");
         String prename = (String) delegateExecution.getVariable("prename");
-        long pbt = (Long) delegateExecution.getVariable("bachnote");
+        float pbt = Float.parseFloat((String) delegateExecution.getVariable("bachnote"));
         int pbtInt = 5;
 
         pbtInt=(int) pbt;
